@@ -18,3 +18,14 @@ Le livrable attendu pour cette activité est un dépôt GitHub contenant le code
 * Qualité du code : Le code source de l'application doit être propre, bien structuré, respecter les bonnes pratiques de développement web, et être facilement compréhensible.
 * Interface utilisateur conviviale : L'interface utilisateur doit être intuitive, esthétiquement plaisante, et offrir une expérience utilisateur optimale pour les réservations de salles de réunion.
 * Gestion des réservations dans la base de données : Les réservations doivent être correctement enregistrées, mises à jour et supprimées dans la base de données, en garantissant l'intégrité des données et la cohérence des informations.
+
+### Steps to utilise the app:
+
+* Import the database from the 'ref' folder: reserva.sql
+* Have the project in Wamp's 'www' folder
+* Go to the project index.php page
+* There are visual hints on the app, but the steps are :
+ > * You need to login with an email and password; or register to have those
+ > * Then the Showcase (to be able to rent a room) and Rented (to see the currently rented rooms) pages will be available
+ > * The Logout button on the upper right portion of the window allow to destroy the session. Login will be required to access the data again.
+

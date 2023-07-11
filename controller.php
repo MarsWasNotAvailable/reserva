@@ -100,16 +100,20 @@
                     die();
 
                     break;
-                case 'Create':
-                    // $Success = $NewConnection->insert($UsersTableName, array(
-                    //     'titre' => $_POST['titre']
-                    // ));
+
+                case 'Rent':
+                    $Success = $NewConnection->insert( 'reservations', array(
+                        'fk_user' => $_POST['IDUser'],
+                        'fk_room' => $_POST['IDRoom'],
+                        'date_begin' => $_POST['DateEnd'],
+                        'date_end' => $_POST['DateEnd'],
+                    ));
             
-                    // if ($Success)
-                    // {
-                    //     header("Location: " . $Redirection);
-                    //     die();
-                    // }
+                    if ($Success)
+                    {
+                        header("Location: " . './rent.php');
+                        die();
+                    }
 
                     break;
 
@@ -134,15 +138,15 @@
                     // }
                     break;
 
-                case 'Delete':
-                    // $UpdateFieldCondition = array('id' => $_POST['CurrentField']);
+                case 'Cancel':
+                    $UpdateFieldCondition = array('id_reservation' => $_POST['IDReservation']);
 
-                    // $Success = $NewConnection->delete($UsersTableName, $UpdateFieldCondition);
+                    $Success = $NewConnection->delete('reservations', $UpdateFieldCondition);
 
-                    // if ($Success) {
-                    //     header("Location: " . $Redirection);
-                    //     die();
-                    // }
+                    if ($Success) {
+                        header("Location: " . './rent.php');
+                        die();
+                    }
                     break;
                 
                 default:

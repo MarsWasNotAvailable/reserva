@@ -32,7 +32,7 @@ header nav a:hover {
     padding-bottom: 0.2em;
 }
 
-.LogOutButton:hover {
+.LogOutButton:hover, section button:hover {
     border-radius: 2px;
     cursor: pointer;
     background-color: rgba(168, 28, 28, 0.603);
@@ -57,9 +57,9 @@ section form > *:focus
     outline: none;
 }
 
-section form {
+section.container form {
     display: inline-grid;
-    width: 30%;
+    /* width: 30%; */
     margin-top: 2em;
     margin-left: auto;
     margin-bottom: 2em;
@@ -74,7 +74,7 @@ section form {
     box-shadow: 3px 3px teal;
 }
 
-section form button {
+section button {
     background: rgba(206, 14, 14, 0.42);
     color: white;
     cursor: pointer;
@@ -86,7 +86,7 @@ section form button {
     padding-bottom: 0.2em;
 }
 
-section form input, section form button {
+section form input, section button {
     margin-bottom: 2em;
     border: none;
     font-size: medium;
@@ -98,6 +98,8 @@ section form h4 {
 
 section {
     display: grid;
+    /* grid-template-columns: 33% 33% 33%; */
+
     justify-items: center;
     text-align: center;
 
@@ -105,7 +107,11 @@ section {
     margin-left: auto;
     margin-top: 4em;
     margin-right: auto;
-    margin-bottom: 15%;
+    /* margin-bottom: 15%; */
+}
+
+section.gridlayout {
+    grid-template-columns: 33% 33% 33%;
 }
 
 section * {
@@ -114,4 +120,29 @@ section * {
 
 #FrontPage p {
     width: 65%;
+}
+
+.RentedRoomCards {
+    display: flex;
+    flex-direction: column;
+    /* width: 33%; */
+    margin-left: auto;
+    margin-right: auto;
+
+    align-items: center;
+
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.RentedRoomCards img {
+    width: 80%;
+}
+
+.RentedRoomCards label {
+    color: black;
+}
+
+.RentedRoomCards span {
+    display: inline-flex;
 }

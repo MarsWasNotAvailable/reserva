@@ -63,8 +63,29 @@
                 $ConditionValue = $ConditionField['Value'];
 
 
-                $SQLQueryString = "SELECT `$Column` FROM `$Table` INNER JOIN `$RightTable` ON `$Table`.`$OnColumnLeft` = `$RightTable`.`$OnColumnRight` WHERE `$Table`.`$ConditionKey` = $ConditionValue ";
+                $SQLQueryString = "SELECT $Column FROM `$Table` INNER JOIN `$RightTable` ON `$Table`.`$OnColumnLeft` = `$RightTable`.`$OnColumnRight` WHERE `$Table`.`$ConditionKey` = $ConditionValue ";
 
+                // var_dump($SQLQueryString);
+
+                $Result = $this->Connection->query($SQLQueryString);
+
+                return $Result->fetchAll(PDO::FETCH_ASSOC);
+
+            } catch (PDOException $e) {
+                echo "Erreur: " . $e->getMessage();
+
+                return false;
+            }
+        }
+
+        public function get_reservation_hc($ConditionField)
+        {
+            try {
+                $SQLQueryString = "SELECT * FROM ((`reservations`
+                INNER JOIN `rooms` ON `reservations`.`fk_room` = `rooms`.`id_room`)
+                INNER JOIN `users` ON `reservations`.`fk_user` = `users`.`id`)
+                WHERE `reservations`.`fk_user` = $ConditionField;";
+                
                 // var_dump($SQLQueryString);
 
                 $Result = $this->Connection->query($SQLQueryString);

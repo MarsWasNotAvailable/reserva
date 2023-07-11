@@ -24,7 +24,7 @@
         include_once('./components/header.php');
     ?>
 
-    <section>
+    <section class="container">
         <form action="./controller.php" method="POST">
             <?php
                 if (isset($_SESSION['HasFailedSignedUp']))

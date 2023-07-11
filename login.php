@@ -22,7 +22,7 @@
         include_once('./components/header.php');
     ?>
 
-    <section>
+    <section class="container">
         <form action="./controller.php" method="POST">
             <input name="Intention" value="Login" type="hidden"></input>
 

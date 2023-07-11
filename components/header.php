@@ -11,7 +11,10 @@
                 <?php
                     if ($IsUserLoggedIn)
                     {
-                        echo '<li class="navigational"><a href="./rent.php">Rent</a></li>';
+                        echo '<li class="navigational"><a href="./showcase.php">Showcase</a></li>';
+
+                        echo '<li class="navigational"><a href="./rent.php">Rented</a></li>';
+                        
                         echo '<li class="navigational"><form method="POST" action="controller.php"><input class="LogOutButton" type="submit" name="Intention" value="Logout" ></form></li>';
                         // echo '<li class="navigational"><button value="./destroy.php" onclick="LogOut(event, this)">Log Out</button></li>';
 
@@ -108,7 +111,9 @@ nav .navigational.selected {
 /* nav img { height: 50%; } */
 
 #Home {
-    width: 50%;
+    /* width: 50%; */
+    width: 4%;
+    margin-right: auto;
 }
 
 #HamburgerMenu {
@@ -159,7 +164,7 @@ nav .navigational.selected {
 
         position: absolute;
         top: 60px;
-        left: 90%;
+        left: 84%;
 
         background-color: #ffa4a4;
         border-radius: 13px;
@@ -174,6 +179,7 @@ nav .navigational.selected {
 
     #HamLinks.Visible {
         display: flex;
+        width: 15%;
     }
 }
 </style>

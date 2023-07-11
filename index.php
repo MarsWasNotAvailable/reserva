@@ -18,13 +18,23 @@
 <body>
     <?php include_once('./components/header.php'); ?>
 
-    <section id="FrontPage">
+    <section id="FrontPage" class="container">
         <?php
             $GreetingName = (session_id() != "" && isset($_SESSION['CurrentUser'])) ? $_SESSION['CurrentUser'] : "Guest";
 
             echo "<h1>Hello " . $GreetingName . "</h1>";
+
+            if (isset($_SESSION['CurrentUser']))
+            {
+                echo '<h2>See the showcase page to rent a new office.</h2>';
+            }
+            else
+            {
+                echo '<h2>This application allows the renting of rooms. You need to register first.</h2>';
+            }
         ?>
 
+        
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda quas totam autem earum cupiditate, eum repellat dolorum veritatis mollitia, natus aperiam debitis provident aliquam magnam optio eius architecto doloribus ipsam?</p>
     </section>
 

@@ -1,0 +1,117 @@
+* {
+    font-family: Menlo,Consolas,monaco,monospace;
+    padding: 0;
+    margin: 0;
+    /* box-sizing: border-box; */
+    /* box-sizing: content-box; */
+}
+
+body {
+    display: grid;
+    background-color: blanchedalmond;
+}
+
+header nav a {
+    text-decoration: none;
+    color: rgb(12, 34, 39);
+    padding: 0;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+.LogOutButton {
+    border-radius: 0;
+    border: none;
+    background-color: rgba(168, 28, 28, 0.27);
+
+    padding-left: 0.8em;
+    padding-top: 0.2em;
+    padding-right: 0.8em;
+    padding-bottom: 0.2em;
+}
+
+.LogOutButton:hover {
+    border-radius: 2px;
+    cursor: pointer;
+    background-color: rgba(168, 28, 28, 0.603);
+}
+
+header nav form {
+    padding: 0;
+}
+
+input {
+    display: flex;
+    width: 100%;
+}
+
+label {
+    color: white;
+}
+
+section form > *:focus
+{
+    box-shadow: 3px 3px teal;
+    outline: none;
+}
+
+section form {
+    display: inline-grid;
+    width: 30%;
+    margin-top: 2em;
+    margin-left: auto;
+    margin-bottom: 2em;
+    margin-right: auto;
+    justify-content: center;
+
+    padding: 3em;
+
+    background-color: rgba(225, 131, 131, 0.85);
+    border-radius: 4px;
+    border-color: gold;
+    box-shadow: 3px 3px teal;
+}
+
+section form button {
+    background: rgba(206, 14, 14, 0.42);
+    color: white;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+}
+
+section form input, section form button {
+    margin-bottom: 2em;
+    border: none;
+    font-size: medium;
+}
+
+section form h4 {
+    margin-bottom: 1em;
+}
+
+section {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+
+    width: 80%;
+    margin-left: auto;
+    margin-top: 4em;
+    margin-right: auto;
+    margin-bottom: 15%;
+}
+
+section * {
+    margin-bottom: 1em;
+}
+
+#FrontPage p {
+    width: 65%;
+}

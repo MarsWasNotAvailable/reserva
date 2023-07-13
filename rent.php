@@ -20,6 +20,10 @@
 <body>
     <?php include_once('./components/header.php'); ?>
 
+    <section class="container">
+        <h2>The rooms you currently are renting: </h2>
+    </section>
+
     <section id="Rent" class="gridlayout">
         <?php
             if (isset($_SESSION['CurrentUser']))
@@ -36,10 +40,9 @@
 
                 $Result = $NewConnection->get_reservation_hc($_SESSION['UserID']);
 
-
                 // var_dump($Result);
 
-                echo '<h2>The rooms you currently are renting: </h2>';
+                echo '';
 
                 foreach ($Result as $Key => $Value)
                 {

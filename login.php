@@ -12,7 +12,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Session Initiation: Login</title>
+    <title>Reserva: Login</title>
     <link rel="icon" href="./cache/favicon.ico" type="image/x-icon" >
 
     <link rel="stylesheet" href="style.css">
